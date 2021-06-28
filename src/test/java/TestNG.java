@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -34,11 +35,11 @@ public class TestNG {
 
         @Test (priority=2)
         public void verifyWebName() {
-            AssertJUnit.assertEquals (websiteName,chromeDriver.getTitle());
+            Assert.assertEquals(websiteName,chromeDriver.getTitle());
         }
 
         @Test (priority=3)
         public void verifyWebURL() {
-            AssertJUnit.assertEquals(websiteURL, chromeDriver.getCurrentUrl());
+            Assert.assertEquals(websiteURL, chromeDriver.getCurrentUrl());
         }
     }
