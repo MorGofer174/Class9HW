@@ -18,10 +18,11 @@ public class youTube {
     public static void youTubeButton (){
         System.out.println(driver.findElement(By.id("logo-icon")));
     }
-    }
-    @Test
+
+    @Test (priority = 2)
     public static void findSong (){
         driver.findElement(By.cssSelector("input[placeholder=Search]")).sendKeys("live aid queen");
+        driver.findElement(By.cssSelector("button[aria-label=Search")).click();
     }
 
 }
