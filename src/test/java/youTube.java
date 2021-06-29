@@ -13,16 +13,15 @@ public class youTube {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://www.youtube.com/");
-//    }
-//    @Test (priority = 1)
-//    public static void youTubeButton (){
-//        System.out.println(driver.findElement(By.id("logo-icon")));
-//    }
+    }
+    @Test (priority = 1)
+    public static void youTubeButton (){
+        System.out.println(driver.findElement(By.id("logo-icon")));
+    }
     }
     @Test
     public static void findSong (){
-        driver.findElement(By.partialLinkText("search_query")).sendKeys("live aid queen");
-        driver.findElement(By.className("style-scope ytd-searchbox")).click();
+        driver.findElement(By.cssSelector("input[placeholder=Search]")).sendKeys("live aid queen");
     }
 
 }
